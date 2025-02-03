@@ -57,7 +57,7 @@ Run AGAT to create a clean FASTA file:
 agat_sp_extract_sequences.pl \
   --gff Ahypochondriacus_315_v1.0.gene.cds_only.cter_trimmed.gff3 \
   --fasta Phytozome/PhytozomeV12/Ahypochondriacus/assembly/Ahypochondriacus_315_v1.0.fa \
-  -o Ahypochondriacus_315_v1.0.cds.fa
+  -o Ahypochondriacus_315_v1.0.gene.cds_only.cter_trimmed.fa
 ```
 
 And now run the notebook:
@@ -71,7 +71,7 @@ You should see no error!
 ```bash
 agat_convert_sp_gff2bed.pl \
   --gff Ahypochondriacus_315_v1.0.gene.cds_only.cter_trimmed.gff3 \
-  -o Ahypochondriacus_315.v1.0.gene.bed
+  -o Ahypochondriacus_315_v1.0.gene.cter_trimmed.bed
 ```
 
 ## Step 8: Check BED file
@@ -79,8 +79,8 @@ agat_convert_sp_gff2bed.pl \
 ```bash
 bedtools getfasta \
   -fi Phytozome/PhytozomeV12/Ahypochondriacus/assembly/Ahypochondriacus_315_v1.0.fa \
-  -bed Ahypochondriacus_315.v1.0.gene.bed \
-  -fo Ahypochondriacus_315.v1.0.gene.cds_from_bed.fa \
+  -bed Ahypochondriacus_315_v1.0.gene.cter_trimmed.bed \
+  -fo Ahypochondriacus_315_v1.0.gene.cter_trimmed.from_bed.fa \
   -name -s -split
 ```
 
