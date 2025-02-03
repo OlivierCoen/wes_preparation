@@ -3,3 +3,4 @@ Phytozome/
 *.fa
 *.gff3
 *.log
+*.bed
