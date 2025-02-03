@@ -1,0 +1,5 @@
+Phytozome/
+*.txt
+*.fa
+*.gff3
+*.log
